@@ -39,7 +39,7 @@ p "Created #{Container.count} containers"
 containers = Container.all
 
 containers.each do |container|
-    container.cards.find_or_create_by!('Here is a card for the container!')
+    container.cards.find_or_create_by!(title: 'Here is a card for the container!')
 end
 
 p "Created #{Card.count} cards"
